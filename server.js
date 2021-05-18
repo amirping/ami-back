@@ -21,8 +21,9 @@ const db = require("./app/models");
 const Role = db.role;
 const Categories=db.categories;
 const actuality=db.actuality;
+const uri = "mongodb+srv://ami_app:JngRD5NA3IO43BnY@cluster0.olzmc.mongodb.net/ami?retryWrites=true&w=majority";
 db.mongoose
-  .connect(`mongodb://${dbConfig.HOST}:${dbConfig.PORT}/${dbConfig.DB}`, {
+  .connect(uri, {
     useNewUrlParser: true,
     useUnifiedTopology: true
   })
@@ -44,6 +45,7 @@ app.get("/", (req, res) => {
 require("./app/routes/auth.routes")(app);
 require("./app/routes/user.routes")(app);
 require("./app/routes/actuality.routes")(app);
+require("./app/routes/declaration.routes")(app);
 require("./app/routes/reclamationticket.routes")(app);
 require("./app/routes/devis.routes")(app);
 

@@ -8,6 +8,7 @@ db.mongoose = mongoose;
 db.user = require("./user.model");
 db.role = require("./role.model");
 db.actuality=require("./actuality.model");
+db.declaration=require("./declaration.model");
 db.categories=require("./categories.model");
 db.reclamation=require("./reclamation.model");
 db.etape=require("./etape.model");
